@@ -14,10 +14,12 @@
         document.querySelector('body').appendChild(newMain);
       });
 
-      // afterEach();
-      //   let newMain = document.querySelector('main');
-      //   newMain.parentNode.removeChild(newMain);
+      afterEach(function () {
 
+
+        let newMain = document.querySelector('main');
+        newMain.parentNode.removeChild(newMain);
+      });
 
       it('should show a list of elements containing data from the provided array', function () {
         // let result = window.thoughter.showRecent(['a', 'b', 'c']);
