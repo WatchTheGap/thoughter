@@ -45,10 +45,15 @@
         let articles = document.querySelectorAll('main article');
         expect(articles.length).to.equal(1);
       });
-      it('should handle an array that has some objects that do not meet specified content criteria', function functionName() {
+      it('should handle an array that has some objects that do not meet specified content criteria', function () {
         window.thoughter.showRecent([{name:'SAD'}, {content: 'testing', createTime: 'time', id: 'id'}]);
         let articles = document.querySelectorAll('main article');
         expect(articles.length).to.equal(1);
+      });
+      it('should handle an array that contains only objects that do not meet the specified criteria', function () {
+        window. thoughter.showRecent([{name: 'SAD'}, {number: 9}]);
+        let articles = document.querySelectorAll('main article');
+        expect(articles.length).to.equal(0);
       });
     });
 
