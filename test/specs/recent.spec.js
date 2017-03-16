@@ -15,8 +15,6 @@
       });
 
       afterEach(function () {
-
-
         let newMain = document.querySelector('main');
         newMain.parentNode.removeChild(newMain);
       });
@@ -63,7 +61,6 @@
         );
         let articles = document.querySelectorAll('main article');
         expect(articles.length).to.equal(1);
-
       });
 
       it('should handle more than one argument, one correct, others not', function () {
@@ -77,11 +74,6 @@
       it('should get data for recent thoughts from the provided source', function () {
         expect(window.thoughter.getRecent).to.be.a('function');
       });
-
-
     });
-
   });
-
-
 }());
