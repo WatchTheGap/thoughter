@@ -1,0 +1,19 @@
+{
+  "name": "thoughter",
+  "version": "1.0.0",
+  "description": "tests for thoughter app. hw week 5 day 3.",
+  "main": "recent-thoughts.js",
+  "scripts": {
+    "test": "karma start recent.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WatchTheGap/thoughter.git"
+  },
+  "author": "Sara Basile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WatchTheGap/thoughter/issues"
+  },
+  "homepage": "https://github.com/WatchTheGap/thoughter#readme"
+}
