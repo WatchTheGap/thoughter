@@ -26,6 +26,11 @@
         expect(window.thoughter.showRecent).to.be.a('function');
       });
 
+      it('should handle no argument', function () {
+        let result = window.thoughter.showRecent();
+          expect(result).to.be.undefined;
+      });
+
       it('should handle an empty array', function () {
         let result = window.thoughter.showRecent([]);
         expect(window.thoughter.showRecent.length).to.equal(0);
@@ -37,6 +42,11 @@
       });
       it('should create an element for each piece of data', function () {
         window.thoughter.showRecent([{content: 'testing', createTime: 'time', id: 'id'}]);
+        let articles = document.querySelectorAll('main article');
+        expect(articles.length).to.equal(1);
+      });
+      it('should handle an array that has some objects that do not meet specified content criteria', function functionName() {
+        window.thoughter.showRecent([{name:'SAD'}, {content: 'testing', createTime: 'time', id: 'id'}]);
         let articles = document.querySelectorAll('main article');
         expect(articles.length).to.equal(1);
       });
