@@ -14,7 +14,7 @@
             return;
         }
 
-        recent = document.querySelector('.recent');
+        recent = document.querySelector('.recent'); //added let, test said recent was not defined
         thoughts.forEach(function showThought(thought) {
             if (!thought.content || !thought.createTime || !thought.id) {
                 return;
