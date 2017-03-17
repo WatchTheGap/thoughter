@@ -39,7 +39,7 @@ module.exports = function configureGrunt(gruntConfig) {
   });
   require('load-grunt-tasks')(gruntConfig);
 
-  gruntConfig.registerTask('build', ['copy']);
+  gruntConfig.registerTask('build', ['clean', 'copy']);
   // gruntConfig.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass'])
 
 
