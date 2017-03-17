@@ -17,11 +17,21 @@ module.exports = function configureGrunt(gruntConfig) {
         ]
       },
 
-      copyjs : {
+      copyjs: {
         files: [
           {
             cwd:'src/js/',
             src: ['*.js'],
+            dest: 'build/',
+            expand: true
+          }
+        ]
+      },
+
+      copyjq: {
+        files: [
+          {
+            src: ['jquery.js'],
             dest: 'build/js/vendor/',
             expand: true
           }
