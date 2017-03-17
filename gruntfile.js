@@ -22,10 +22,7 @@ module.exports = function configureGrunt(gruntConfig) {
           {
             cwd:'src/js/',
             src: ['*.js'],
-            dest: 'build/',
-            options: {
-
-            },
+            dest: 'build/js/vendor/',
             expand: true
           }
         ]
