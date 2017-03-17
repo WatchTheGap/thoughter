@@ -6,7 +6,7 @@ module.exports = function configureGrunt(gruntConfig) {
     clean: ['build/'],
 
     copy: {
-      copyHtml: {
+      copyhtml: {
         files: [
           {
           cwd: 'src/',
@@ -15,16 +15,42 @@ module.exports = function configureGrunt(gruntConfig) {
           expand: true
           }
         ]
+      },
+
+      copyjs : {
+        files: [
+          {
+            cwd:'src/js/',
+            src: ['*.js'],
+            dest: 'build/',
+            options: {
+
+            },
+            expand: true
+          }
+        ]
       }
     },
 
     sass: {
+      all: {
+        files: {
+          'build/style.css' : 'src/sass/main.scss'
+        }
+      }
 
     },
 
-    jshint: {
-
-    },
+    // jshint: {
+    //   appjs: {
+    //     options: {
+    //       jshintrc: '.jshintrc'
+    //     },
+    //     files: {
+    //       src: ['src/**/*.js']
+    //     }
+    //   }
+    // },  this doesn't work for some reason
 
     karma: {
 
@@ -39,7 +65,7 @@ module.exports = function configureGrunt(gruntConfig) {
   });
   require('load-grunt-tasks')(gruntConfig);
 
-  gruntConfig.registerTask('build', ['clean', 'copy']);
+  gruntConfig.registerTask('build', ['clean', 'copy', 'sass']);
   // gruntConfig.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass'])
 
 
