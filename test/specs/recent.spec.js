@@ -15,12 +15,11 @@
       });
 
       afterEach(function () {
-        let newMain = document.querySelector('main');
+        let newMain = document.querySelector('main.recent'); //added class so it removes the correct main
         newMain.parentNode.removeChild(newMain);
       });
-
-      it('should show a list of elements containing data from the provided array', function () {
-        // let result = window.thoughter.showRecent(['a', 'b', 'c']);
+      
+      it('should be a function', function () {
         expect(window.thoughter.showRecent).to.be.a('function');
       });
 
