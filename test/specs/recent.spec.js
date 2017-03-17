@@ -31,7 +31,7 @@
       it('should handle an empty array', function () {
         let result = window.thoughter.showRecent([]);
         let articles = document.querySelectorAll('main.recent article');
-        expect(article.length).to.equal(0);
+        expect(articles.length).to.equal(0);
       });
 
       it('should handle an argument that is not an array', function () {

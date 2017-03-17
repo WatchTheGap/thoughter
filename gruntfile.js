@@ -22,7 +22,7 @@ module.exports = function configureGrunt(gruntConfig) {
           {
             cwd:'src/js/',
             src: ['*.js'],
-            dest: 'build/',
+            dest: 'build/js/',
             expand: true
           }
         ]
@@ -60,7 +60,17 @@ module.exports = function configureGrunt(gruntConfig) {
     // },  this doesn't work for some reason
 
     karma: {
-
+      all: {
+        options: {
+          frameworks: ['mocha', 'chai'],
+          browsers: ['Chrome'],
+          singleRun: true,
+          files: [
+            'src/**/*.js',
+            'test/specs/**/*.js'
+          ]
+        }
+      }
     }
 
 
@@ -72,7 +82,7 @@ module.exports = function configureGrunt(gruntConfig) {
   });
   require('load-grunt-tasks')(gruntConfig);
 
-  gruntConfig.registerTask('build', ['clean', 'copy', 'sass']);
+  gruntConfig.registerTask('build', ['clean', 'copy', 'sass', 'karma']);
   // gruntConfig.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass'])
 
 
