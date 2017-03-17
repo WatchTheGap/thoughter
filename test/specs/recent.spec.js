@@ -18,7 +18,7 @@
         let newMain = document.querySelector('main.recent'); //added class so it removes the correct main
         newMain.parentNode.removeChild(newMain);
       });
-      
+
       it('should be a function', function () {
         expect(window.thoughter.showRecent).to.be.a('function');
       });
@@ -30,7 +30,8 @@
 
       it('should handle an empty array', function () {
         let result = window.thoughter.showRecent([]);
-        expect(window.thoughter.showRecent.length).to.equal(0);
+        let articles = document.querySelectorAll('main.recent article');
+        expect(article.length).to.equal(0);
       });
 
       it('should handle an argument that is not an array', function () {
