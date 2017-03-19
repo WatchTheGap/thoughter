@@ -14,32 +14,20 @@ To generate a new build:
 
 *test assertion framework*
 - chai  
-
 *for process automation*
 - grunt-contrib-clean
-
 - grunt-contrib-copy
-
 - grunt-contrib-jshint
-
 - grunt-contrib-sass
-
 - grunt-contrib-watch
-
 - grunt-karma
-
 *jQuery*
 - jquery
-
 *for running mocha/chai tests*
 - karma
-
 - karma-chai
-
 - karma-chrome-launcher
-
 - karma-mocha
-
 *for testing framework*
 - mocha
 
