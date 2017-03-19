@@ -11,12 +11,11 @@ Build automation managed through Grunt.
 To generate a new build:
   Fork, clone, and branch source repository from Jakerella.
   Initialize node_modules and add the following developer dependencies:
+  
     *test assertion framework*
-
     - chai  
 
     *for process automation*
-
     - grunt-contrib-clean
 
     - grunt-contrib-copy
@@ -30,11 +29,9 @@ To generate a new build:
     - grunt-karma
 
     *jQuery*
-
     - jquery
 
     *for running mocha/chai tests*
-
     - karma
 
     - karma-chai
@@ -44,9 +41,8 @@ To generate a new build:
     - karma-mocha
 
     *for testing framework*
-
     - mocha
-    
+
   Set jshintrc to allow for ES6 options.
   In terminal, run "grunt build" from project directory "thoughter".
     This will generate a new build directory, lint all js files through jshint,
