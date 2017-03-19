@@ -76,7 +76,7 @@ module.exports = function configureGrunt(gruntConfig) {
 
   });
   require('load-grunt-tasks')(gruntConfig);
-
+  gruntConfig.loadNpmTasks('grunt-contrib-watch');
   gruntConfig.registerTask('build', ['jshint', 'clean', 'copy', 'sass', 'karma']);
 
 
