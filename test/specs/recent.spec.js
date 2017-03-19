@@ -29,7 +29,7 @@
       });
 
       it('should handle an empty array', function () {
-        let result = window.thoughter.showRecent([]);
+        window.thoughter.showRecent([]);
         let articles = document.querySelectorAll('main.recent article');
         expect(articles.length).to.equal(0);
       });

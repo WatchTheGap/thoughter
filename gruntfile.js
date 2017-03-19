@@ -31,7 +31,7 @@ module.exports = function configureGrunt(gruntConfig) {
       copyjq: {
         files: [
           {
-            cwd: 'node_modules/jquery/src/',
+            cwd: 'node_modules/jquery/dist/',
             src: ['jquery.js'],
             dest: 'build/js/vendor/',
             expand: true
