@@ -31,6 +31,7 @@ module.exports = function configureGrunt(gruntConfig) {
       copyjq: {
         files: [
           {
+            cwd: 'node_modules/jquery/src/',
             src: ['jquery.js'],
             dest: 'build/js/vendor/',
             expand: true
@@ -48,16 +49,16 @@ module.exports = function configureGrunt(gruntConfig) {
 
     },
 
-    // jshint: {
-    //   appjs: {
-    //     options: {
-    //       jshintrc: '.jshintrc'
-    //     },
-    //     files: {
-    //       src: ['src/**/*.js']
-    //     }
-    //   }
-    // },  this doesn't work for some reason
+    jshint: {
+      appjs: {
+        options: {
+          jshintrc: '.jshintrc'
+        },
+        files: {
+          src: ['src/**/*.js']
+        }
+      }
+    },  //this doesn't work for some reason
 
     karma: {
       all: {
@@ -82,7 +83,7 @@ module.exports = function configureGrunt(gruntConfig) {
   });
   require('load-grunt-tasks')(gruntConfig);
 
-  gruntConfig.registerTask('build', ['clean', 'copy', 'sass', 'karma']);
+  gruntConfig.registerTask('build', ['jshint', 'clean', 'copy', 'sass', 'karma']);
   // gruntConfig.registerTask('build', ['jshint', 'karma', 'clean', 'copy', 'sass'])
 
 
