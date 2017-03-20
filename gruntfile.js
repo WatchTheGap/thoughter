@@ -20,8 +20,8 @@ module.exports = function configureGrunt(gruntConfig) {
       copyjs: {
         files: [
           {
-            cwd:'src/js/',
-            src: ['*.js'],
+            cwd:'src/',
+            src: ['**/*.js'],
             dest: 'build/js/',
             expand: true
           }
